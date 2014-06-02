@@ -1,3 +1,13 @@
+// File Prologue
+// Name:       Joel Harrison
+// File:       main.cpp
+// Instructor: Craig Garnder
+// Class:      CS 2450
+// Assignment: 5
+// Date:       5/30/2014
+// 
+// This is the code for the driver. 
+
 #include "PriorityQueue.h"
 #include<string>
 #include<fstream>

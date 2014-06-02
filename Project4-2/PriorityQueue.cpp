@@ -8,10 +8,6 @@
 // 
 // This is the code for the PriorityQueue class. 
 
-// I declare that the following source code was written solely by me.
-// I understand that copying any source code, in whole or in part, constitutes cheating, 
-// and that I will receive a zero on this project if I am found in violation of this policy.
-// -----------------------------------------------------------------------------------------
 
 #include "PriorityQueue.h"
 #include "Node.h"
@@ -38,20 +34,50 @@ void PriorityQueue::insert(string name, int num)
 	}
 	else//insert the new node in the proper spot(sorted highest priority to lowest)
 	{
-		Node* p, *q;
+		Node* p, *q, *r;
 		p = head;
+		r = p;
 		q = new Node(name, num);
-		//this is where the sorting happens!!!!  Yay for sorting!!
+		//this is where the sorting happens!!!!  Yay for my complex sorting algorithm!!
 		if(q->priority < p->priority)
 		{
 			while(q->priority < p->priority && p->next != NULL)
+			{
+				r = p;
 				p = p->next;
-			p->next = q;
+			}
+
+			while(q->priority == p->priority && p->next != NULL)
+			{//moves the new node to the back of the other nodes with same priority
+				r = p;
+				p = p->next;
+			}
+			if(p->priority < q->priority)
+			{
+				q->next = p;
+				r->next = q;
+			}
+			else if(p->next == NULL)
+			{
+				r = p;
+				q->next = p->next;
+				r->next = q;
+			}
+			else
+			{
+				q->next = p;
+				r->next = q;
+			}
 		}
 		else if(q->priority == p->priority)
 		{//this inserts the new node behind the existing node with the same priority
-			q->next = p->next;
-			p->next = q;
+			while(q->priority == p->priority)
+			{
+				r = p;
+				p = p->next;
+			}
+			q->next = p;
+			r->next = q;
 		}
 		else
 		{

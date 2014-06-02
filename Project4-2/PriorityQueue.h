@@ -1,17 +1,12 @@
 // File Prologue
 // Name:       Joel Harrison
-// File:       List.h
+// File:       PriorityQueue.h
 // Instructor: Craig Garnder
 // Class:      CS 2450
 // Assignment: 5
 // Date:       5/30/2014
 // 
 // PriorityQueue keeps track of the nodes in the queue based on a priority associated with the node.
-
-// I declare that the following source code was written solely by me.
-// I understand that copying any source code, in whole or in part, constitutes cheating, 
-// and that I will receive a zero on this project if I am found in violation of this policy.
-// -----------------------------------------------------------------------------------------
 
 #pragma once
 #include "Node.h"

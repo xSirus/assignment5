@@ -8,10 +8,6 @@
 // 
 // This is the Node class. It creates nodes that contain a name and a priority integer.
 
-// I declare that the following source code was written solely by me. 
-// I understand that copying any source code, in whole or in part, constitutes cheating, 
-// and that I will receive a zero on this project if I am found in violation of this policy.
-// -----------------------------------------------------------------------------------------
 
 #include "Node.h"
 #include <iostream>
